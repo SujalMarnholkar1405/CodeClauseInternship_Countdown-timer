@@ -1,0 +1,261 @@
+body {
+    background-image: url(rose.jpg);
+    background-repeat: no repeat;
+    background-size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+  }
+
+
+
+
+  h1{
+    font-size: 45px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  .valentines-day-card {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-left: 200px;
+    margin-top: 50px;
+    padding-left: 10px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    width: 400px;
+    height: 150px;
+    background-color: #f30531;
+    overflow: hidden;
+    border:10px solid white;
+    border-radius:10px;
+    box-shadow: 0 0 100px rgba(0,0,0,.4);
+  }
+
+
+main .countdown {
+    display: flex;
+    margin-top: 50px;
+    padding-left: 300px;
+}
+
+main .countdown>* {
+    display: flex;
+    flex-direction: column;
+    margin-right: 2.5em;
+}
+
+main .countdown .count {
+    display: block;
+    width: 150px;
+    height: 145px;
+    color: var(--soft-red);
+    background: var(--dark-desaturated-blue);
+    border-radius: 10px;
+    font-size: 5.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 0 var(--very-dark-black-blue), 0 72px 0 rgba(0, 0, 0, 0.2) inset;
+    position: relative;
+    overflow-x: hidden;
+    border: 10px solid black;
+}
+
+
+
+main .countdown .count#sec {
+    animation: anim 1s alternate linear infinite;
+}
+
+@keyframes anim {
+    0%, 100% {
+        box-shadow: 0 10px 0 var(--very-dark-black-blue), 0 72px 0 rgba(0, 0, 0, 0.2) inset;
+    }
+    100% {
+        box-shadow: 0 10px 0 var(--very-dark-black-blue), 0 -72px 0 rgba(0, 0, 0, 0.2) inset;
+    }
+}
+
+main .countdown .count::before {
+    top: calc(50% - 7.5px);
+    left: 0;
+    transform: translateX(-50%);
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 15px;
+    background: var(--very-dark-black-blue);
+    border-radius: 50%;
+}
+
+main .countdown .count::after {
+    top: calc(50% - 7.5px);
+    right: 0;
+    transform: translateX(50%);
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 15px;
+    background: var(--very-dark-black-blue);
+    border-radius: 50%;
+}
+
+main .countdown .count-txt {
+    margin-top: 1em;
+    color: var(--grayish-blue);
+    font-size: 1.8em;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+
+@media screen and (max-width:800px) {
+    main{
+        width: 100%;
+    }
+    main .countdown {
+        display: flex;
+        justify-content: space-between;
+        width: 95%;
+        margin-bottom: 200px;
+    }
+    main .countdown>* {
+        display: flex;
+        flex-direction: column;
+        margin-right: 0em;
+    }
+    main .countdown .count {
+        display: block;
+        width: 100px;
+        height: 90px;
+        color: var(--soft-red);
+        background: var(--dark-desaturated-blue);
+        border-radius: 10px;
+        font-size: 4em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 10px 0 var(--very-dark-black-blue), 0 45px 0 rgba(0, 0, 0, 0.2) inset;
+        position: relative;
+        overflow-x: hidden;
+    }
+    main .countdown .count::before {
+        top: calc(50% - 7.5px);
+        left: 0;
+        transform: translateX(-50%);
+        position: absolute;
+        content: '';
+        width: 15px;
+        height: 15px;
+        background: var(--very-dark-black-blue);
+        border-radius: 50%;
+    }
+    main .countdown .count::after {
+        top: calc(50% - 7.5px);
+        right: 0;
+        transform: translateX(50%);
+        position: absolute;
+        content: '';
+        width: 15px;
+        height: 15px;
+        background: var(--very-dark-black-blue);
+        border-radius: 50%;
+    }
+    main .countdown .count-txt {
+        margin-top: 10px;
+        color: var(--grayish-blue);
+        letter-spacing: 2px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:400px) {
+    main{
+        width: 100%;
+    }
+    main .countdown {
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        width: 95%;
+        margin-bottom: 200px;
+    }
+    main .countdown>* {
+        display: flex;
+        flex-direction: column;
+        margin-right: 0em;
+    }
+    main .countdown .count {
+        display: block;
+        width: 80px;
+        height: 60px;
+        color: var(--soft-red);
+        background: var(--dark-desaturated-blue);
+        border-radius: 5px;
+        font-size: 4em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 10px 0 var(--very-dark-black-blue), 0 30px 0 rgba(0, 0, 0, 0.2) inset;
+        position: relative;
+        overflow-x: hidden;
+    }
+    main .countdown .count::before {
+        top: calc(50% - 5px);
+        left: 0;
+        transform: translateX(-50%);
+        position: absolute;
+        content: '';
+        width: 10px;
+        height: 10px;
+        background: var(--very-dark-black-blue);
+        border-radius: 50%;
+    }
+    main .countdown .count::after {
+        top: calc(50% - 5px);
+        right: 0;
+        transform: translateX(50%);
+        position: absolute;
+        content: '';
+        width: 10px;
+        height: 10px;
+        background: var(--very-dark-black-blue);
+        border-radius: 50%;
+    }
+    main .countdown .count-txt {
+        margin-top: 1.5em;
+        color: var(--grayish-blue);
+        letter-spacing: 2px;
+        text-align: center;
+    }
+}
+
+.countdown{
+    margin-left: 20px;
+}
+.days{
+    margin-top: 50px;
+  
+    
+}
+
+.hours{
+    margin-top: 50px;
+  
+}
+.minutes{
+    margin-top: 50px;
+  
+}
+.seconds{
+    margin-top: 50px;
+   
+}
+    
+    
+   
